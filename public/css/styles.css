@@ -1,0 +1,16 @@
+body {
+    padding-bottom: 100px;
+}
+
+#login{
+    margin-top: 80px;
+    padding-top: 1px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.logof {
+    height: 40px;
+}

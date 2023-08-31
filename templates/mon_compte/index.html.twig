@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Compte{% endblock %}
+
+{% block body %}
+
+<h1 class="text-center m-5">Mon Compte</h1>
+
+{{ form_start(form) }}
+    {{ form_row(form.email)}}
+    {{ form_row(form.nom)}}
+    {{ form_row(form.prenom)}}
+    {{ form_row(form.date_naissance)}}
+    {# {{ form_row(form.is_proprietaire)}} #}
+
+        <h3>Adresse</h3>
+        {{ form_row(form.adresses) }}
+        
+
+    <button type="submit" class="btn btn-primary mb-5">Modifier Information</button>
+{{ form_end(form) }}
+
+{% endblock %}

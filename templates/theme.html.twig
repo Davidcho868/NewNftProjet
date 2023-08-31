@@ -1,0 +1,18 @@
+{% block collection_row %}
+	<h2>{{ label }}</h2>
+	<button type="button" class="add_item_link btn btn-success" data-collection-holder-class="{{ id }}">
+		Ajouter
+	</button>
+	<ul class="{{ id }}" 
+	data-index="{{ form|length > 0 ? form|last.vars.name + 1 : 0 }}" 
+	data-prototype="{{ form_widget(form.vars.prototype)|e('html_attr') }}" 
+	data-collection-holder
+	data-prototype-name="__{{ form.vars.name }}__"
+	>
+		{% for child in form %}
+			<li data-collection-element>
+				{{ form_widget(child) }}
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock collection_row %}
